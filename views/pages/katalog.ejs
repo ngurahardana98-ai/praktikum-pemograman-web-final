@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<main class="container my-4" style="padding: 20px">
+  <h1><%= pageTitle %></h1>
+  <p>
+    Selamat datang di halaman katalog produk. Temukan berbagai pilihan layanan
+    dan modul terbaik di sini.
+  </p>
+
+  <ul style="list-style-type: disc; margin-left: 20px; margin-top: 15px">
+    <li>Modul Keamanan Siber & Deteksi Serangan</li>
+    <li>Praktikum Arsitektur MVC Express.js</li>
+    <li>Pengembangan Aplikasi Web Lanjut</li>
+  </ul>
+  
+  <div class="card" style="margin-top: 2rem">
+    <h2>Form Tambah Produk</h2>
+    <!-- Formulir mengirim data melalui metode HTTP POST -->
+    <form action="/katalog/tambah" method="POST">
+      <div style="margin-bottom: 1rem">
+        <label for="namaProduk">Nama Produk:</label><br />
+        <!-- Atribut 'name' adalah kunci penting untuk dibaca di Back-End -->
+        <input type="text" id="namaProduk" name="namaProduk" required />
+      </div>
+      <button type="submit">submit</button>
+    </form>
+  </div>
+</main>
+
+<%- include('../partials/footer') %>
